@@ -13,15 +13,9 @@ The purpose of this project is to bridge theoretical solid-state device physics 
 ### In Scope
 * Writing and executing Ngspice netlists for DC sweep analyses.
 * Integration of the SkyWater 130nm PDK libraries into the simulation environment.
-* Generation of output characteristics ($I_d$-$V_{ds}$) and transfer characteristics ($I_d$-$V_{gs}$).
+* Generation of output characteristics (I_d-V_ds) and transfer characteristics (I_d-V_g).
 * Calculation of threshold voltage and subthreshold swing.
 * Python scripting for data parsing and plotting.
-
-### Out of Scope
-* Physical layout drawing (e.g., using Magic).
-* Parasitic extraction (PEX).
-* Design of multi-transistor circuits (e.g., amplifiers, logic gates).
-* Physical fabrication or silicon testing.
 
 ## 4. Deliverables
 * **Simulation Environment Setup**: A configured directory with the Sky130 PDK and base Ngspice simulation files.
