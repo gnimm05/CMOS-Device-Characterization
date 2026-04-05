@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def analyze_nmos():
-    # --- 1. TRANSFER CHARACTERISTICS & PARAMETER EXTRACTION ---
+    # 1. TRANSFER CHARACTERISTICS
     data_trans = np.loadtxt('nmos_transfer_data.txt')
     vgs = data_trans[:, 0]
     id_trans = data_trans[:, 1]
@@ -28,7 +28,7 @@ def analyze_nmos():
     print(f"Subthreshold Swing (SS) : {ss:.2f} mV/dec")
     print(f"---------------------------------\n")
 
-    # --- 2. OUTPUT CHARACTERISTICS ---
+    # 2. OUTPUT CHARACTERISTICS
     data_out = np.loadtxt('nmos_output_data.txt')
     vds = data_out[:, 0]
     id_out = data_out[:, 1]
@@ -41,7 +41,7 @@ def analyze_nmos():
     vds_reshaped = vds.reshape(num_vgs_steps, num_vds_points)
     id_reshaped = id_out.reshape(num_vgs_steps, num_vds_points)
 
-    # --- 3. PLOTTING ---
+    # 3. PLOTTING
     fig, axes = plt.subplots(1, 3, figsize=(18, 5))
 
     # Plot 1: Transfer (Linear)

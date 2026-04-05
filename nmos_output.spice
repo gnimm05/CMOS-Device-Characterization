@@ -3,7 +3,6 @@
 .param mc_pr_switch=0
 .lib "/home/gnimm05/pdks/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
 
-* DUT: L and W are strictly in micrometers (NO 'u' suffix)
 XM1 D G 0 0 sky130_fd_pr__nfet_01v8 L=0.15 W=1.0
 
 * Voltage Sources

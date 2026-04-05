@@ -1,0 +1,17 @@
+* PMOS Transfer Characteristics (Id-Vgs) - Sky130
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+.lib "/home/gnimm05/pdks/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+
+XM1 D G 0 0 sky130_fd_pr__pfet_01v8 L=0.15 W=1.0
+
+VDS D 0 -1.8V
+VGS G 0 0V
+
+.control
+  * Fine sweep of VGS for accurate subthreshold analysis
+  dc VGS 0 -1.8 -0.005
+  let id = I(VDS)
+  wrdata pmos_transfer_data.txt id
+.endc
+.end
